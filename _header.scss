@@ -1,0 +1,151 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $mobile-header-height;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: $dark;
+  color: $light;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+  overflow: visible;
+
+  .brand {
+    max-width: 200px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 24px;
+    z-index: 5;
+  }
+  .navigation-wrapper {
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    width: 100vw;
+    height: 100vh;
+    width: 100vw;
+    z-index: 4;
+    transition: transform 0.75s ease-out;
+
+    &.navigation-visible {
+      transform: translateX(-100vw);
+      transition: transform 0.75s ease-out;
+    }
+
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      background-color: rgba($dark, 0.99);
+
+      &-item {
+        color: $light;
+        list-style: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        margin: 10px 0;
+        a {
+          color: $light;
+        }
+
+        @media (min-width: 768px) {
+          font-size: 24px;
+          font-weight: 600;
+          margin: 12px 0;
+        }
+      }
+    }
+
+    @media (min-width: 1024px) {
+      position: relative;
+      top: unset;
+      left: unset;
+      width: auto;
+      display: flex;
+      margin: 0 40px;
+      .navigation {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+
+        &-item {
+          min-width: 100px;
+          color: $light;
+          list-style: none;
+          text-transform: uppercase;
+          a {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    height: $desktop-header-height;
+    justify-content: space-between;
+
+    .brand {
+      margin-left: 40px;
+      font-size: 24px;
+    }
+  }
+
+  .hamburger {
+    width: $mobile-header-height;
+    height: $mobile-header-height;
+    margin-right: calc(#{$mobile-header-height} / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+
+    .hamburger-line {
+      position: relative;
+      display: block;
+      width: 70%;
+      height: 2px;
+      border-radius: 2px;
+      background: $light;
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background: $light;
+      }
+
+      &:before {
+        top: -9px;
+      }
+
+      &:after {
+        top: 9px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      position: relative;
+      display: none;
+    }
+  }
+}

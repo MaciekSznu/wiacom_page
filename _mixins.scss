@@ -1,0 +1,171 @@
+@import "_variables.scss";
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin h2 {
+  font-size: $mobile-h2-size;
+  line-height: $mobile-h2-line-height;
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    font-size: $tablet-h2-size;
+    line-height: $tablet-h2-line-height;
+    margin-bottom: 24px;
+  }
+}
+
+@mixin h3 {
+  font-size: $mobile-h3-size;
+  line-height: $mobile-h3-line-height;
+
+  @media (min-width: 768px) {
+    font-size: $tablet-h3-size;
+    line-height: $tablet-h3-line-height;
+  }
+}
+
+@mixin h4 {
+  font-size: $mobile-h4-size;
+  line-height: $mobile-h4-line-height;
+
+  @media (min-width: 768px) {
+    font-size: $tablet-h4-size;
+    line-height: $tablet-h4-line-height;
+  }
+}
+
+@mixin footer-title {
+  font-size: $mobile-h4-size;
+  line-height: $mobile-h4-line-height;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@mixin footer-paragraph {
+  font-size: 14px;
+  line-height: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@mixin p {
+  font-size: $mobile-p-size;
+  line-height: $mobile-p-line-height;
+  margin-bottom: 12px;
+
+  @media (min-width: 768px) {
+    font-size: $tablet-p-size;
+    line-height: $tablet-p-line-height;
+    margin-bottom: 16px;
+  }
+}
+
+@mixin section-vertical-padding {
+  padding-top: 40px;
+  padding-bottom: 0;
+
+  @media (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+}
+
+@mixin section-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  @media (min-width: 768px) {
+    font-weight: 600;
+  }
+  @media (min-width: 1024px) {
+    font-weight: 700;
+  }
+}
+
+@mixin section-paragraph {
+  font-weight: 400;
+  @media (min-width: 768px) {
+    font-weight: 500;
+  }
+}
+
+@mixin ul {
+  padding-left: 20px;
+  font-weight: 400;
+
+  li {
+    font-size: $mobile-p-size;
+    line-height: $mobile-p-line-height;
+    margin-bottom: 6px;
+
+    &:last-of-type {
+      margin-bottom: 12px;
+    }
+  }
+  @media (min-width: 768px) {
+    padding-left: 40px;
+    font-weight: 500;
+
+    li {
+      font-size: $tablet-p-size;
+      line-height: $tablet-p-line-height;
+      margin-bottom: 8px;
+
+      &:last-of-type {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+@mixin section-title-before {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: 47px;
+    left: 0;
+    content: "W";
+    font-size: 160px;
+    line-height: 160px;
+    font-weight: 900;
+    color: rgba($dark, 0.05);
+
+    @media (min-width: 768px) {
+      top: 71px;
+      font-size: 210px;
+      line-height: 210px;
+    }
+
+    @media (min-width: 1024px) {
+      top: 113px;
+      font-size: 230px;
+      line-height: 230px;
+    }
+  }
+}

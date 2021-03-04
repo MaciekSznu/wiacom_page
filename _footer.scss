@@ -1,0 +1,86 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+#section-kontakt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: $dark;
+  color: $light;
+  padding: 20px;
+  margin-top: 40px;
+
+  @media (min-width: 768px) {
+    padding: 30px 40px;
+    margin-top: 60px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 30px 48px;
+    margin-top: 80px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 0 64px;
+  }
+
+  .contact,
+  .company,
+  .menu {
+    padding: 20px 0;
+
+    &-article-header {
+      @include footer-title;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    &-article-item {
+      @include footer-paragraph;
+      font-weight: 400;
+      a {
+        color: $light;
+        img {
+          height: 20px;
+          width: auto;
+          margin-top: 8px;
+        }
+      }
+
+      margin-bottom: 0;
+    }
+
+    .footer-navigation {
+      @include ul;
+      list-style: none;
+      padding: 0;
+      text-transform: uppercase;
+      font-weight: 600;
+      li {
+        padding-left: 0;
+        margin-bottom: 0;
+
+        a {
+          @include footer-paragraph;
+          font-weight: 400;
+          color: $light;
+        }
+
+        @media (min-width: 768px) {
+          text-align: right;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .company {
+      padding-left: 20px;
+    }
+  }
+}

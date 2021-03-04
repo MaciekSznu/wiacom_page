@@ -1,0 +1,43 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+#section-home {
+  height: calc(100vh - #{$mobile-header-height});
+  max-height: 768px;
+  background-image: url(./assets/images/hero_01_1368_768.jpg);
+  background-size: cover;
+  background-position: center;
+
+  @include center;
+
+  .hero-wrapper {
+    @include center;
+    flex-direction: column;
+    height: 100%;
+
+    .hero-logo {
+      width: 40vw;
+      height: auto;
+      max-width: 300px;
+    }
+
+    .hero-text {
+      @include h2;
+      text-align: center;
+      span {
+        display: none;
+        text-transform: uppercase;
+      }
+    }
+
+    .hero-cta {
+      background: $dark;
+      color: $light;
+      @include h3;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+  }
+}

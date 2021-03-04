@@ -1,0 +1,110 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+#section-about {
+  .about-wrapper {
+    @include section-vertical-padding;
+    @include section-title-before;
+
+    .section-title {
+      @include h2;
+      @include section-title;
+    }
+
+    .section-paragraph {
+      @include p;
+      @include section-paragraph;
+    }
+
+    .about-counters {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+
+      .about-counter {
+        width: 30vw;
+        height: 30vw;
+        min-width: 280px;
+        max-width: 300px;
+        min-height: 280px;
+        max-height: 300px;
+        background: $dark-blue;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 40px;
+        padding-top: 60px;
+
+        &-number {
+          color: $light;
+          font-size: 60px;
+          line-height: 100px;
+          font-weight: 900;
+        }
+
+        &-text {
+          color: $light;
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 500;
+        }
+      }
+      @media (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 60px;
+
+        .about-counter {
+          min-width: 220px;
+          max-width: 220px;
+          min-height: 220px;
+          max-height: 220px;
+          padding-left: 30px;
+          padding-top: 36px;
+
+          &-number {
+            font-size: 50px;
+            line-height: 90px;
+          }
+        }
+      }
+
+      @media (min-width: 1024px) {
+        margin-top: 80px;
+
+        .about-counter {
+          min-width: 280px;
+          max-width: 280px;
+          min-height: 280px;
+          max-height: 280px;
+          padding-left: 40px;
+          padding-top: 60px;
+
+          &-number {
+            color: $light;
+            font-size: 60px;
+            line-height: 100px;
+            font-weight: 900;
+          }
+
+          &-text {
+            color: $light;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      @media (min-width: 1200px) {
+        max-width: 1200px;
+        margin: 80px auto;
+      }
+    }
+  }
+}
