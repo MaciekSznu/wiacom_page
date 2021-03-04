@@ -1731,6 +1731,7 @@ header .hamburger .hamburger-line:after {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -1764,7 +1765,6 @@ body {
   overflow-y: scroll;
   background: #f2f2f2;
   color: #00171f;
-  scroll-behavior: smooth;
 }
 
 body header,
