@@ -782,6 +782,7 @@ header .navigation-wrapper .navigation-item a {
     top: unset;
     left: unset;
     width: auto;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -810,6 +811,9 @@ header .navigation-wrapper .navigation-item a {
   }
   header .navigation-wrapper .navigation-item a {
     color: #f2f2f2;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
   }
 }
 

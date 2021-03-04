@@ -75,6 +75,7 @@ header {
       top: unset;
       left: unset;
       width: auto;
+      height: 100%;
       display: flex;
       margin: 0 40px;
       .navigation {
@@ -91,6 +92,9 @@ header {
           text-transform: uppercase;
           a {
             color: $light;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0;
           }
         }
       }
