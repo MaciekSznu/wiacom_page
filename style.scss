@@ -8,11 +8,13 @@
 @import "_prices.scss";
 @import "_services.scss";
 @import "_images-wrapper.scss";
+@import "_contact-form.scss";
 @import "_variables.scss";
 @import "_mixins.scss";
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -35,7 +37,6 @@ body {
   overflow-y: scroll;
   background: $light;
   color: $dark;
-  scroll-behavior: smooth;
 
   header,
   footer {
@@ -60,7 +61,8 @@ body {
   #section-about,
   #section-services,
   #section-benefits,
-  #section-prices {
+  #section-prices,
+  .contact-form-wrapper {
     width: 100%;
     max-width: 1368px;
     padding: 20px;
