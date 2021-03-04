@@ -40,6 +40,15 @@ body {
   header,
   footer {
     width: 100vw;
+    @media (min-width: 1280px) {
+      padding-left: 64px;
+      padding-right: 64px;
+    }
+
+    @media (min-width: 1408px) {
+      padding-left: calc((100vw - 1280px) / 2);
+      padding-right: calc((100vw - 1280px) / 2);
+    }
   }
 
   a {
@@ -69,5 +78,9 @@ body {
     @media (min-width: 1280px) {
       padding: 0 64px;
     }
+  }
+
+  #section-home {
+    padding: 0;
   }
 }

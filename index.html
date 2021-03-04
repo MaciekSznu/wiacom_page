@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Waicom</title>
+    <link rel="stylesheet" href="./assets/libs/aos.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,10 +26,21 @@
       </div>
     </header>
     <section id="section-home" class="hero">
-      <div class="hero-wrapper">
-        <img class="hero-logo" src="./assets/images/waicom_logo_400.png" alt="Logo firmy Waicom" />
-        <h2 class="hero-text"><span>waicom</span>nowoczesne biuro rachunkowe</h2>
-        <!-- <button class="hero-cta">poznajmy się</button> -->
+      <div class="hero-control-prev">
+        <img src="./assets/icons/chevron-left.svg" alt="Previous slide" />
+      </div>
+      <div class="hero-control-next">
+        <img src="./assets/icons/chevron-right.svg" alt="Next slide" />
+      </div>
+      <div class="hero-carousel">
+        <div class="hero-wrapper">
+          <img class="hero-image" src="./assets/images/hero_01_1368_768.jpg" alt="" />
+          <h2 class="hero-text">Nowoczesne biuro rachunkowe</h2>
+        </div>
+        <div class="hero-wrapper">
+          <img class="hero-image" src="./assets/images/hero_02_1368_768.jpg" alt="" />
+          <h2 class="hero-text">Kompleksowe prowadzenie księgowości</h2>
+        </div>
       </div>
     </section>
     <section id="section-about" class="about">
@@ -205,6 +217,16 @@
         </ul>
       </article>
     </footer>
+    <script src="./assets/libs/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js"></script>
     <script src="script.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 600,
+        easing: "ease-in-sine",
+        delay: 100,
+      });
+    </script>
   </body>
 </html>

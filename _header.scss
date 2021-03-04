@@ -77,7 +77,6 @@ header {
       width: auto;
       height: 100%;
       display: flex;
-      margin: 0 40px;
       .navigation {
         width: auto;
         display: flex;
@@ -107,6 +106,12 @@ header {
     .brand {
       margin-left: 40px;
       font-size: 24px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .brand {
+      margin-left: 0;
     }
   }
 

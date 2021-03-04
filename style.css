@@ -785,7 +785,6 @@ header .navigation-wrapper .navigation-item a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 40px;
   }
   header .navigation-wrapper .navigation {
     width: auto;
@@ -826,6 +825,12 @@ header .navigation-wrapper .navigation-item a {
   header .brand {
     margin-left: 40px;
     font-size: 24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  header .brand {
+    margin-left: 0;
   }
 }
 
@@ -880,23 +885,62 @@ header .hamburger .hamburger-line:after {
 }
 
 #section-home {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+#section-home .hero-control-prev,
+#section-home .hero-control-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  color: #ffffff;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#section-home .hero-control-prev img,
+#section-home .hero-control-next img {
+  height: 50%;
+  width: auto;
+}
+
+#section-home .hero-control-prev {
+  left: 1rem;
+  padding-right: 0.125rem;
+}
+
+#section-home .hero-control-next {
+  right: 2rem;
+  padding-left: 0.125rem;
+}
+
+#section-home .hero-carousel {
   height: calc(100vh - 40px);
   max-height: 768px;
-  background-image: url(./assets/images/hero_01_1368_768.jpg);
-  background-size: cover;
-  background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-#section-home .hero-wrapper {
+@media (min-width: 1024px) {
+  #section-home .hero-carousel {
+    height: calc(100vh - 60px);
+  }
+}
+
+#section-home .hero-carousel .hero-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -906,54 +950,42 @@ header .hamburger .hamburger-line:after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  height: calc(100vh - 40px);
+  max-height: 768px;
+  position: relative;
+  max-height: 100%;
+  width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+#section-home .hero-carousel .hero-wrapper .hero-image {
+  position: absolute;
   height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-#section-home .hero-wrapper .hero-logo {
-  width: 40vw;
-  height: auto;
-  max-width: 300px;
-}
-
-#section-home .hero-wrapper .hero-text {
-  font-size: 24px;
-  line-height: 36px;
-  margin-bottom: 16px;
+#section-home .hero-carousel .hero-wrapper .hero-text {
+  font-size: 32px;
+  line-height: 44px;
+  max-width: 80%;
   text-align: center;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
-  #section-home .hero-wrapper .hero-text {
-    font-size: 32px;
-    line-height: 48px;
+  #section-home .hero-carousel .hero-wrapper .hero-text {
+    font-size: 40px;
+    line-height: 60px;
     margin-bottom: 24px;
   }
 }
 
-#section-home .hero-wrapper .hero-text span {
-  display: none;
-  text-transform: uppercase;
-}
-
-#section-home .hero-wrapper .hero-cta {
-  background: #00171f;
-  color: #f2f2f2;
-  font-size: 20px;
-  line-height: 30px;
-  padding: 10px 30px;
-  border: none;
-  border-radius: 4px;
-  margin-top: 8px;
-}
-
-@media (min-width: 768px) {
-  #section-home .hero-wrapper .hero-cta {
-    font-size: 24px;
-    line-height: 36px;
+@media (min-width: 1024px) {
+  #section-home .hero-carousel .hero-wrapper {
+    height: calc(100vh - 60px);
   }
 }
 
@@ -1409,6 +1441,22 @@ body footer {
   width: 100vw;
 }
 
+@media (min-width: 1280px) {
+  body header,
+  body footer {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+@media (min-width: 1408px) {
+  body header,
+  body footer {
+    padding-left: calc((100vw - 1280px) / 2);
+    padding-right: calc((100vw - 1280px) / 2);
+  }
+}
+
 body a {
   text-decoration: none;
   color: #00171f;
@@ -1454,5 +1502,9 @@ body #section-prices {
   body #section-prices {
     padding: 0 64px;
   }
+}
+
+body #section-home {
+  padding: 0;
 }
 /*# sourceMappingURL=style.css.map */
