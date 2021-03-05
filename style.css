@@ -1007,7 +1007,6 @@ header .hamburger .hamburger-line:after {
   text-align: center;
   z-index: 2;
   color: #003459;
-  text-shadow: 2px 2px 2px rgba(242, 242, 242, 0.9);
 }
 
 @media (min-width: 768px) {
@@ -1021,12 +1020,6 @@ header .hamburger .hamburger-line:after {
   #section-home .hero-carousel .hero-wrapper .hero-text {
     font-size: 60px;
     line-height: 80px;
-  }
-}
-
-@media (min-width: 1024px) {
-  #section-home .hero-carousel .hero-wrapper .hero-text {
-    max-width: 800px;
   }
 }
 

@@ -69,11 +69,11 @@
         text-align: center;
         z-index: 2;
         color: $dark-blue;
-        text-shadow: 2px 2px 2px rgba($light, 0.9);
+        // text-shadow: 2px 2px 2px rgba($light, 0.9);
 
-        @media (min-width: 1024px) {
-          max-width: 800px;
-        }
+        // @media (min-width: 1024px) {
+        //   max-width: 100%;
+        // }
       }
 
       @media (min-width: 1024px) {
