@@ -12,10 +12,6 @@
     margin: 0;
     padding: 0;
 
-    &:not(:first-of-type) {
-      filter: grayscale(100%);
-    }
-
     @media (max-width: 600px) {
       width: calc(100% / 3);
 

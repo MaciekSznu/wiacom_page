@@ -19,12 +19,10 @@ header {
   z-index: 5;
   overflow: visible;
 
-  .brand {
-    max-width: 200px;
-    margin-left: 20px;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 24px;
+  .brand img {
+    width: $mobile-header-height;
+    height: auto;
+    filter: invert(100%) sepia(0%) saturate(7438%) hue-rotate(164deg) brightness(104%) contrast(112%);
     z-index: 5;
   }
   .navigation-wrapper {
@@ -103,9 +101,9 @@ header {
     height: $desktop-header-height;
     justify-content: space-between;
 
-    .brand {
-      margin-left: 40px;
-      font-size: 24px;
+    .brand img {
+      width: $desktop-header-height;
+      height: auto;
     }
   }
 
