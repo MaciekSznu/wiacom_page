@@ -59,6 +59,7 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 60px;
+        margin-bottom: 0;
 
         .about-counter {
           min-width: 220px;
@@ -104,7 +105,7 @@
 
       @media (min-width: 1240px) {
         max-width: 1240px;
-        margin: 80px auto;
+        margin: 80px auto 0;
       }
     }
 

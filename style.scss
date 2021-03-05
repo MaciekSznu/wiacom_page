@@ -82,6 +82,18 @@ body {
     }
   }
 
+  .contact-form-wrapper {
+    @media (min-width: 1024px) {
+      margin: 64px 48px 40px;
+      padding: 0;
+    }
+
+    @media (min-width: 1280px) {
+      margin: 64px 64px 40px;
+      padding: 0;
+    }
+  }
+
   #section-home {
     padding: 0;
   }

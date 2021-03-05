@@ -186,3 +186,26 @@
     }
   }
 }
+
+@mixin price-tabs-border {
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    background: $dark;
+    bottom: 0;
+    right: 0;
+  }
+
+  &:before {
+    width: 50px;
+    height: 3px;
+  }
+
+  &:after {
+    height: 50px;
+    width: 3px;
+  }
+}

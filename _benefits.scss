@@ -72,10 +72,6 @@
             padding-top: 20px;
           }
 
-          .benefits-image {
-            // font-size: 50px;
-            // line-height: 90px;
-          }
           .benefits-text {
             padding: 0;
             font-size: 14px;
@@ -118,7 +114,6 @@
       @media (min-width: 1200px) {
         margin-top: 80px;
         max-width: 1200px;
-        //margin: 0 auto;
 
         .benefits-item-wrapper {
           min-width: 350px;
@@ -147,6 +142,19 @@
             line-height: 24px;
           }
         }
+      }
+    }
+
+    @media (min-width: 1024px) {
+      &:after {
+        position: absolute;
+        content: "";
+        top: 100px;
+        right: 0;
+        width: 50%;
+        height: calc(100% - 160px);
+        background: rgba($dark-blue, 0.1);
+        z-index: -1;
       }
     }
   }

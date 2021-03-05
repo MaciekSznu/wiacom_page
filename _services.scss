@@ -37,6 +37,8 @@
         background: rgba($dark-blue, 0.5);
         margin-bottom: 20px;
 
+        @include price-tabs-border;
+
         .services-list-item {
           @include p;
           font-weight: 500;

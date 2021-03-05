@@ -43,6 +43,8 @@
         background: rgba($dark-blue, 0.5);
         margin-bottom: 20px;
 
+        @include price-tabs-border;
+
         .prices-list-title {
           @include h4;
           margin-bottom: 16px;
