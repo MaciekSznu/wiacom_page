@@ -4,6 +4,7 @@
   padding-top: 40px;
   padding-bottom: 0;
   position: relative;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -207,10 +208,27 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1240px) {
   #section-about .about-wrapper .about-counters {
-    max-width: 1200px;
+    max-width: 1240px;
     margin: 80px auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  #section-about .about-wrapper .section-title,
+  #section-about .about-wrapper .section-paragraph {
+    width: 65%;
+  }
+  #section-about .about-wrapper:after {
+    position: absolute;
+    content: "";
+    top: 100px;
+    right: 0;
+    width: 50%;
+    height: calc(100% - 120px);
+    background: rgba(0, 52, 89, 0.1);
+    z-index: -1;
   }
 }
 
@@ -909,7 +927,7 @@ header .hamburger .hamburger-line:after {
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;
-  color: #ffffff;
+  background-color: rgba(242, 242, 242, 0.75);
   z-index: 5;
   cursor: pointer;
 }
@@ -974,13 +992,27 @@ header .hamburger .hamburger-line:after {
   max-width: 80%;
   text-align: center;
   z-index: 2;
+  color: #003459;
+  text-shadow: 2px 2px 2px rgba(242, 242, 242, 0.9);
 }
 
 @media (min-width: 768px) {
   #section-home .hero-carousel .hero-wrapper .hero-text {
     font-size: 40px;
     line-height: 60px;
-    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #section-home .hero-carousel .hero-wrapper .hero-text {
+    font-size: 60px;
+    line-height: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #section-home .hero-carousel .hero-wrapper .hero-text {
+    max-width: 800px;
   }
 }
 

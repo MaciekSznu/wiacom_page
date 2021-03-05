@@ -5,6 +5,7 @@
   .about-wrapper {
     @include section-vertical-padding;
     @include section-title-before;
+    position: relative;
 
     .section-title {
       @include h2;
@@ -101,9 +102,27 @@
         }
       }
 
-      @media (min-width: 1200px) {
-        max-width: 1200px;
+      @media (min-width: 1240px) {
+        max-width: 1240px;
         margin: 80px auto;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .section-title,
+      .section-paragraph {
+        width: 65%;
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        top: 100px;
+        right: 0;
+        width: 50%;
+        height: calc(100% - 120px);
+        background: rgba($dark-blue, 0.1);
+        z-index: -1;
       }
     }
   }
