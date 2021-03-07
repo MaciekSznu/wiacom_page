@@ -742,6 +742,7 @@ header .brand img {
   -webkit-filter: invert(100%) sepia(0%) saturate(7438%) hue-rotate(164deg) brightness(104%) contrast(112%);
           filter: invert(100%) sepia(0%) saturate(7438%) hue-rotate(164deg) brightness(104%) contrast(112%);
   z-index: 5;
+  margin-left: 20px;
 }
 
 header .navigation-wrapper {
@@ -857,11 +858,6 @@ header .navigation-wrapper .navigation-item a {
   header .brand img {
     width: 60px;
     height: auto;
-  }
-}
-
-@media (min-width: 1280px) {
-  header .brand {
     margin-left: 0;
   }
 }
