@@ -954,8 +954,14 @@ header .hamburger .hamburger-line:after {
 }
 
 #section-home .hero-control-next {
-  right: 2rem;
+  right: 1rem;
   padding-left: 0.125rem;
+}
+
+@media (min-width: 1024px) {
+  #section-home .hero-control-next {
+    right: 2rem;
+  }
 }
 
 #section-home .hero-carousel {
@@ -1459,6 +1465,11 @@ header .hamburger .hamburger-line:after {
   height: calc(100% / 4 / 4 * 3);
   margin: 0;
   padding: 0;
+}
+
+.images-wrapper img:not(:first-of-type) {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 @media (max-width: 600px) {

@@ -2,8 +2,6 @@
 @import "_mixins.scss";
 
 #section-home {
-  // height: calc(100vh - #{$mobile-header-height});
-  // max-height: 768px;
   position: relative;
   overflow: hidden;
   padding: 0;
@@ -34,8 +32,12 @@
   }
 
   .hero-control-next {
-    right: 2rem;
+    right: 1rem;
     padding-left: 0.125rem;
+
+    @media (min-width: 1024px) {
+      right: 2rem;
+    }
   }
 
   .hero-carousel {
